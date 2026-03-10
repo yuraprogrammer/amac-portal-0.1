@@ -42,7 +42,8 @@ function statusBadge(status){
 }
 
 $(function () {
-
+    $("#studentSubHeader").empty();
+    $("#studentSubHeader").append("<h4>" + studentName + "</h4>");
     Sync.listen(msg => {
 
         if (msg.type === "assignmentCreated") {
