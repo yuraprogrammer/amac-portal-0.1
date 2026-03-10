@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Course - ClassRoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+    <script src="../assets/js/common/jquery.min.js"></script>
+    <script src="../assets/js/common/api.js"></script>
+    <script src="../assets/js/student/course.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h1 id="course-title">Course Title</h1>
+        <p id="course-desc" class="text-muted">Course description here.</p>
+    </div>
+</section>
+
+<section class="py-5 container">
+    <ul class="nav nav-tabs mb-4" id="courseTabs" role="tablist">
+        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#overview">Overview</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#materials">Materials</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#assignments">Assignments</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#grades">Grades</button></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="overview">Course overview content...</div>
+        <div class="tab-pane fade" id="materials"><ul id="materials-list" class="list-group"></ul></div>
+        <div class="tab-pane fade" id="assignments"><table id="assignments-table" class="table table-hover"></table></div>
+        <div class="tab-pane fade" id="grades"><table id="grades-table" class="table table-hover"></table></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("../partial/navbar.html");
+        $("#footer-placeholder").load("../partial/footer.html");
+    });
+</script>
+</body>
+</html>

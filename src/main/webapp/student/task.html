@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment - ClassRoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+
+    <script src="../assets/js/common/jquery.min.js"></script>
+    <script src="../assets/js/common/api.js"></script>
+    <script src="../assets/js/student/assignments.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+
+<!-- Assignment header -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <h1 id="task-title">Assignment title</h1>
+        <p class="text-muted mb-1">
+            Course: <span id="task-course">—</span>
+        </p>
+        <p class="text-muted">
+            Deadline: <strong id="task-deadline">—</strong>
+        </p>
+    </div>
+</section>
+
+<!-- Assignment content -->
+<section class="py-5">
+    <div class="container">
+        <h4>Description</h4>
+        <div id="task-description" class="mb-4">
+            Assignment description goes here.
+        </div>
+
+        <h4>Your submission</h4>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div id="submission-status" class="mb-3">
+                    <span class="badge bg-warning">Not submitted</span>
+                </div>
+
+                <form id="submission-form">
+                    <div class="mb-3">
+                        <label class="form-label">Upload file</label>
+                        <input type="file" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Comment</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit assignment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("../partial/navbar.html");
+        $("#footer-placeholder").load("../partial/footer.html");
+    });
+</script>
+
+</body>
+</html>

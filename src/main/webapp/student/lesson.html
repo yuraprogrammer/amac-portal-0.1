@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson - ClassRoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+
+    <script src="../assets/js/common/jquery.min.js"></script>
+    <script src="../assets/js/common/api.js"></script>
+    <script src="../assets/js/student/lessons.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+
+<!-- Lesson header -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <h1 id="lesson-title">Lesson title</h1>
+        <p class="text-muted">
+            Course: <span id="lesson-course">—</span>
+        </p>
+    </div>
+</section>
+
+<!-- Lesson content -->
+<section class="py-5">
+    <div class="container">
+        <div id="lesson-content">
+            <p>
+                Lesson text content goes here.
+                Can be HTML rendered from backend.
+            </p>
+        </div>
+
+        <hr>
+
+        <h5>Attachments</h5>
+        <ul id="lesson-files" class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Lecture slides.pdf
+                <a href="#" class="btn btn-sm btn-outline-secondary">Download</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("../partial/navbar.html");
+        $("#footer-placeholder").load("../partial/footer.html");
+    });
+</script>
+
+</body>
+</html>

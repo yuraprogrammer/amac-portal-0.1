@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - ClassRoom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/student.css">
+    <script src="../assets/js/common/jquery.min.js"></script>
+    <script src="../assets/js/common/api.js"></script>
+    <script src="../assets/js/student/dashboard.js?v0.0.1"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+
+<!-- Hero -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+        <h1 class="mb-3">Welcome, Student!</h1>
+        <p class="text-muted mb-4">Here is your study progress and assignments overview.</p>
+    </div>
+</section>
+
+<!-- Courses -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="mb-4">Your Courses</h2>
+        <div class="row g-4" id="courses-list">
+            <!-- Динамические карточки курсов через JS -->
+        </div>
+    </div>
+</section>
+
+<!-- Assignments -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4">Your Assignments</h2>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle" id="assignments-table">
+                <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Course</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Динамические строки через JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("../partial/navbar.html");
+        $("#footer-placeholder").load("../partial/footer.html");
+    });
+</script>
+</body>
+</html>

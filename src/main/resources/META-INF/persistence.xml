@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <!-- Имя persistence unit -->
+    <persistence-unit name="amacPU" transaction-type="JTA">
+
+        <!-- JTA DataSource, должен быть создан в WildFly -->
+        <jta-data-source>java:/jboss/datasources/amac_portal</jta-data-source>
+
+        <!-- Entity классы -->
+        <class>yurii.kulyk.amacportal.entity.User</class>
+        <class>yurii.kulyk.amacportal.entity.Course</class>
+        <class>yurii.kulyk.amacportal.entity.Tenant</class>
+        <class>yurii.kulyk.amacportal.entity.CourseMember</class>
+        <class>yurii.kulyk.amacportal.entity.Module</class>
+        <class>yurii.kulyk.amacportal.entity.Lesson</class>
+        <class>yurii.kulyk.amacportal.entity.LearningMaterial</class>
+        <class>yurii.kulyk.amacportal.entity.Assignment</class>
+        <class>yurii.kulyk.amacportal.entity.Submission</class>
+        <class>yurii.kulyk.amacportal.entity.AiEvaluation</class>
+        <class>yurii.kulyk.amacportal.entity.LearningMetric</class>
+        <class>yurii.kulyk.amacportal.entity.ContentEmbedding</class>
+
+        <!-- Настройки Hibernate / JPA -->
+        <properties>
+            <!-- Автоматическое обновление схемы (для dev) -->
+            <property name="javax.persistence.schema-generation.database.action" value="none"/>
+
+            <!-- Лог SQL для отладки -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+
+            <!-- Dialect PostgreSQL -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Instructor Panel</title>
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <script src="../assets/js/common/jquery.min.js"></script>
+
+    <script src="../assets/js/demo/sync.js"></script>
+    <script src="../assets/js/demo/store.js"></script>
+    <script src="../assets/js/demo/instructor.js?v0.3.3"></script>
+    <!--script src="../assets/js/common/chart.js"></script-->
+    <!--script src="https://cdn.jsdelivr.net/npm/chart.js"></script-->
+
+</head>
+
+<body class="container py-4">
+
+<h2 class="mb-4">
+    🎓 Instructor Dashboard
+</h2>
+
+<hr>
+<h3 class="mb-4">Course Dashboard - American History</h3>
+
+<div class="row mb-4">
+
+    <div class="col">
+        <div class="card p-3 text-center">
+            <h3 id="statAssignments">0</h3>
+            Assignments
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card p-3 text-center">
+            <h3 id="statSubmissions">0</h3>
+            Submissions
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card p-3 text-center">
+            <h3 id="statAverage">0</h3>
+            Average grade
+        </div>
+    </div>
+
+</div>
+<!--div class="card p-3 mb-4">
+
+    <h5>🏆 Leaderboard</h5>
+
+    <ul id="leaderboard" class="list-group"></ul>
+
+</div-->
+<h4>Create Assignment</h4>
+
+<div class="input-group mb-4">
+    <span class="input-group-text">Subject:</span>
+    <input id="assignmentTitle"
+           class="form-control"
+           placeholder="Assignment title">
+    <span class="input-group-text">Deadline:</span>
+    <input type="datetime-local"
+           id="deadlineInput"
+           class="form-control">
+    <button class="btn btn-primary"
+            onclick="createAssignment()">
+        Create
+    </button>
+
+</div>
+
+<h4>Assignments</h4>
+<ul id="assignments" class="list-group mb-4"></ul>
+
+<h4>Student Submissions</h4>
+<ul id="submissions" class="list-group"></ul>
+<!--h4 class="mt-4">Notifications</h4>
+<ul id="notifications" class="list-group mb-4"></ul-->
+<h4 class="mt-4">Students Online</h4>
+
+<ul id="studentsOnline"
+    class="list-group"></ul>
+
+<h4 class="mt-4">Live Chat</h4>
+
+<div class="card">
+
+    <div id="chatBox"></div>
+
+    <input id="chatInput"
+           class="form-control mt-2"
+           placeholder="Type message">
+
+    <button onclick="sendChatInstructor()"
+            class="btn btn-primary mt-2">
+        Send
+    </button>
+
+</div>
+
+<div id="loading"
+     class="text-center my-3"
+     style="display:none">
+
+    <div class="spinner-border text-primary"></div>
+
+    <p class="mt-2 text-muted">Processing request...</p>
+
+</div>
+
+<!--canvas id="gradesChart"></canvas-->
+
+<div class="card p-3 mt-4">
+
+    <h5>📜 Grade History</h5>
+
+    <ul id="gradeHistory"
+        class="list-group"></ul>
+
+</div>
+
+<div class="card p-3 mt-4">
+
+    <h5>⚡ Activity Feed</h5>
+
+    <ul id="activityFeed"
+        class="list-group"></ul>
+
+</div>
+
+</body>
+</html>

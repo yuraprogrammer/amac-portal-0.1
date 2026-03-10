@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Student Panel</title>
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <script src="../assets/js/common/jquery.min.js"></script>
+
+    <script src="../assets/js/demo/sync.js"></script>
+    <script src="../assets/js/demo/store.js"></script>
+    <script src="../assets/js/demo/student.js?v0.2.9"></script>
+
+</head>
+<body class="container py-4">
+
+<h2 class="mb-4">
+    📚 Student Workspace
+</h2>
+
+<hr>
+
+<div class="card p-3">
+
+    <h4>📚 My Assignments</h4>
+
+    <ul id="studentAssignments"
+        class="list-group"></ul>
+
+</div>
+
+<ul id="assignments" class="list-group"></ul>
+<h4 class="mt-4">Progress</h4>
+
+<div class="progress mb-3">
+
+    <div id="progressBar"
+         class="progress-bar bg-success"
+         style="width:0%">
+
+        0%
+
+    </div>
+
+</div>
+
+<h4 class="mt-4">Live Chat</h4>
+
+<div class="card">
+
+    <div id="chatBox"></div>
+
+    <input id="chatInput"
+           class="form-control mt-2"
+           placeholder="Type message">
+
+    <button onclick="sendChatStudent()"
+            class="btn btn-primary mt-2">
+        Send
+    </button>
+
+</div>
+</body>
+</html>
